@@ -1,7 +1,10 @@
 import React from 'react';
-import toggleToDo from '../actions/toggleToDo'
+import toggleToDo from '../actions/toggleToDo';
+import { useDispatch } from 'react-redux';
 
-const ToDo = ({todo, dispatch}) => {
+const ToDo = ({ todo }) => {
+  const dispatch = useDispatch();
+
   return (
     <div>
       {todo.name} <br />

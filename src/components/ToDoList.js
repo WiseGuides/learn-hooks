@@ -1,10 +1,9 @@
 import React from 'react';
-import ClickableToDo from './ClickableToDo';
+import ToDo from './ToDo';
 
 const ToDoList = ({todos}) => {
-  console.log("hi")
-  const todoEls = Object.values(todos).map(todo => (
-    <ClickableToDo id={todo.id} key={todo.id} />
+  const todoEls = todos.map(todo => (
+    <ToDo todo={todo} key={todo.id}/>
   ));
   return <div>{todoEls}</div>
 }
